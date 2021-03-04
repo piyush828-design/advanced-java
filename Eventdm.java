@@ -5,6 +5,7 @@ import java.awt.event.*;
 
    Frame f1=new Frame();
    Button b1=new Button("click");
+   Button b2=new Button("delete");
    TextField tf1=new TextField(40);
    
               Eventdm()
@@ -12,10 +13,12 @@ import java.awt.event.*;
                f1.setLayout(new FlowLayout());
                
                f1.add(b1);
+               f1.add(b2);
                f1.add(tf1);
                A a=new A(tf1);
-               
+           
                b1.addActionListener(a);
+               b2.addActionListener(a);
                f1.setSize(450,450);
                f1.setVisible(true);
            }
@@ -36,6 +39,8 @@ import java.awt.event.*;
                public void actionPerformed(ActionEvent ae)
                {
                    tf1.setText("welcome");
+                
                }
+             
            }
 }
